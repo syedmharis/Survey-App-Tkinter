@@ -152,7 +152,7 @@ class SculptureForm(tk.Tk):
         male_count = len(males)
 
         #Error checks because stats are derived from 2 values
-        if female_count == 2:
+        if female_count >= 2:
             average_age = statistics.mean(ages)
             age_stdev = statistics.stdev(ages)
             statistics_label = ttk.Label(self.view_entries, text=f" Average age : {average_age}\n Female count : {female_count}\n Male count : {male_count}\n Age standard deviation : {age_stdev}")
